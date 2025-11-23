@@ -19,8 +19,9 @@ const FooterOne = ({ style }: any) => {
                      <div className={`footer-intro ${style ? "position-relative z-1" : ""}`}>
                         <div className="bg-wrapper">
                            <div className="logo mb-20">
-                              <Link href="/">
-                                 <Image src={style ? footerLogo_2 : footerLogo_1} alt="" />
+                              <Link href="/" className="d-flex align-items-center gap-3 text-decoration-none">
+                                 <Image src="/logo/logo.png" alt="ALJABER DUBAI logo" width={80} height={80} style={{ width: "auto", height: "80px" }} />
+                                 <span className="fw-semibold text-uppercase fs-5">ALJABER DUBAI</span>
                               </Link>
                            </div>
                            <p className="mb-60 lg-mb-40 md-mb-20">Mars Residence, Dubai United Arab Emirates 337-1500</p>
