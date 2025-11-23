@@ -28,27 +28,39 @@ const Banner = () => {
    }, [])
 
    return (
-      <div className="hero-banner-one z-1 pt-225 xl-pt-200 pb-250 xl-pb-150 lg-pb-100 position-relative" style={{ overflow: 'hidden' }}>
+      <div className="hero-banner-one z-1 pt-225 xl-pt-200 pb-250 xl-pb-150 lg-pb-100 position-relative" style={{ overflow: 'hidden', minHeight: '800px' }}>
          {/* Background Slider */}
-         <div className="hero-slider-wrapper position-absolute w-100 h-100" style={{ top: 0, left: 0, zIndex: -1 }}>
-            <Slider ref={sliderRef} {...settings} className="h-100">
-               <div className="slider-item" style={{ height: '100vh' }}>
-                  <div className="slider-bg" style={{
-                     backgroundImage: 'url(/slider/dubai1.jpg)',
-                     backgroundSize: 'cover',
-                     backgroundPosition: 'center',
-                     width: '100%',
-                     height: '100%'
-                  }} />
+         <div className="hero-slider-wrapper position-absolute" style={{ 
+            top: 0, 
+            left: 0, 
+            width: '100%',
+            height: '100%',
+            zIndex: 0
+         }}>
+            <Slider ref={sliderRef} {...settings}>
+               <div style={{ height: '100%', width: '100%' }}>
+                  <img 
+                     src="/slider/dubai1.jpg"
+                     alt="Dubai"
+                     style={{
+                        width: '100%',
+                        height: '800px',
+                        objectFit: 'cover',
+                        objectPosition: 'center'
+                     }}
+                  />
                </div>
-               <div className="slider-item" style={{ height: '100vh' }}>
-                  <div className="slider-bg" style={{
-                     backgroundImage: 'url(/slider/dubai2.jpg)',
-                     backgroundSize: 'cover',
-                     backgroundPosition: 'center',
-                     width: '100%',
-                     height: '100%'
-                  }} />
+               <div style={{ height: '100%', width: '100%' }}>
+                  <img 
+                     src="/slider/dubai2.jpg"
+                     alt="Dubai"
+                     style={{
+                        width: '100%',
+                        height: '800px',
+                        objectFit: 'cover',
+                        objectPosition: 'center'
+                     }}
+                  />
                </div>
             </Slider>
          </div>
@@ -57,8 +69,9 @@ const Banner = () => {
          <div className="position-absolute w-100 h-100" style={{ 
             top: 0, 
             left: 0, 
-            background: 'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5))',
-            zIndex: 0 
+            background: 'linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.6))',
+            zIndex: 1,
+            pointerEvents: 'none'
          }} />
 
          <div className="container position-relative" style={{ zIndex: 2 }}>
@@ -83,10 +96,14 @@ const Banner = () => {
             .hero-slider-wrapper :global(.slick-slider),
             .hero-slider-wrapper :global(.slick-list),
             .hero-slider-wrapper :global(.slick-track) {
-               height: 100%;
+               height: 100% !important;
+            }
+            .hero-slider-wrapper :global(.slick-slide) {
+               height: 100% !important;
             }
             .hero-slider-wrapper :global(.slick-slide) > div {
-               height: 100%;
+               height: 100% !important;
+               display: block !important;
             }
          `}</style>
       </div>
