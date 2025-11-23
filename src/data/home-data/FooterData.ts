@@ -2,11 +2,13 @@ interface DataType {
    id: number;
    page: string;
    widget_title: string;
+   widget_title_key?: string;
    widget_class?: string;
    widget_class2?: string;
    footer_link: {
       link: string;
       link_title: string;
+      link_title_key?: string;
    }[];
 
 }
@@ -17,14 +19,16 @@ const footer_data: DataType[] = [
       page: "home_1",
       widget_class: "xs-mt-50",
       widget_title: "Links",
-      footer_link: [{ link: "/", link_title: "Home" }, { link: "/purchase", link_title: "Purchase" }, { link: "/about_us_01", link_title: "About Us" }, { link: "/sales", link_title: "Sales" }, { link: "/insurance", link_title: "Insurance" }, { link: "/blog_01", link_title: "Blog" }, { link: "/contact", link_title: "Contact Us" },]
+      widget_title_key: "footer.links",
+      footer_link: [{ link: "/", link_title: "Home", link_title_key: "nav.home" }, { link: "/purchase", link_title: "Purchase", link_title_key: "nav.purchase" }, { link: "/about_us_01", link_title: "About Us", link_title_key: "nav.aboutUs" }, { link: "/sales", link_title: "Sales", link_title_key: "nav.sales" }, { link: "/insurance", link_title: "Insurance", link_title_key: "nav.insurance" }, { link: "/blog_01", link_title: "Blog", link_title_key: "nav.blog" }, { link: "/contact", link_title: "Contact Us", link_title_key: "nav.contactUs" },]
    },
    {
       id: 2,
       widget_class: "xs-mt-30",
       page: "home_1",
       widget_title: "Legal",
-      footer_link: [{ link: "/faq", link_title: "Terms & conditions" }, { link: "/faq", link_title: "Cookie" }, { link: "/faq", link_title: "Privacy policy" }, { link: "/faq", link_title: "Faq’s" },]
+      widget_title_key: "footer.legal",
+      footer_link: [{ link: "/faq", link_title: "Terms & conditions", link_title_key: "footer.termsConditions" }, { link: "/faq", link_title: "Cookie", link_title_key: "footer.cookie" }, { link: "/faq", link_title: "Privacy policy", link_title_key: "footer.privacyPolicy" }, { link: "/faq", link_title: "Faq's", link_title_key: "footer.faqs" },]
    },
    {
       id: 3,

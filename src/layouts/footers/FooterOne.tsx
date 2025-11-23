@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import footer_data from "@/data/home-data/FooterData"
+import { useTranslation } from "@/contexts/TranslationContext"
 
 import footerLogo_1 from "@/assets/images/logo/logo_01.svg"
 import footerLogo_2 from "@/assets/images/logo/logo_03.svg"
@@ -10,6 +12,8 @@ import footerShape_2 from "@/assets/images/shape/shape_33.svg"
 const icon_1: string[] = ["facebook", "twitter", "instagram"]
 
 const FooterOne = ({ style }: any) => {
+   const { t } = useTranslation();
+   
    return (
       <div className={`footer-one ${style ? "dark-bg" : ""}`}>
          <div className="position-relative z-1">
@@ -24,8 +28,8 @@ const FooterOne = ({ style }: any) => {
                                  <span className="fw-semibold text-uppercase fs-5">ALJABER DUBAI</span>
                               </Link>
                            </div>
-                           <p className="mb-60 lg-mb-40 md-mb-20">Mars Residence, Dubai United Arab Emirates 337-1500</p>
-                           <h6>CONTACT</h6>
+                           <p className="mb-60 lg-mb-40 md-mb-20">{t('footer.address')}</p>
+                           <h6>{t('footer.contact')}</h6>
                            <Link href="mailto:info@aljaberdubai.ae" className={`email tran3s mb-70 lg-mb-50 ${style ? "font-garamond" : "fs-24 text-decoration-underline"}`}>info@aljaberdubai.ae</Link>
                            <ul className="style-none d-flex align-items-center social-icon">
                               {icon_1.map((icon, i) => (
@@ -41,10 +45,10 @@ const FooterOne = ({ style }: any) => {
                      <div className={`d-flex flex-wrap ${style ? "h-100" : ""}`}>
                         {footer_data.filter((items) => items.page === "home_1").map((item) => (
                            <div key={item.id} className={`footer-nav mt-100 lg-mt-80 ${item.widget_class}`}>
-                              <h5 className={`footer-title ${style ? "text-white" : ''}`}>{item.widget_title}</h5>
+                              <h5 className={`footer-title ${style ? "text-white" : ''}`}>{item.widget_title_key ? t(item.widget_title_key) : item.widget_title}</h5>
                               <ul className="footer-nav-link style-none">
                                  {item.footer_link.map((li, i) => (
-                                    <li key={i}><Link href={li.link}>{li.link_title}</Link></li>
+                                    <li key={i}><Link href={li.link}>{li.link_title_key ? t(li.link_title_key) : li.link_title}</Link></li>
                                  ))}
                               </ul>
                            </div>

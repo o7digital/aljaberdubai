@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "home": "Home",
+    "purchase": "Purchase",
+    "aboutUs": "About Us",
+    "sales": "Sales",
+    "insurance": "Insurance",
+    "blog": "Blog",
+    "contactUs": "Contact Us",
+    "login": "Login"
+  },
+  "banner": {
+    "title": "We've more than 745,000 apartments, place & plot.",
+    "searchLabel": "I'm looking to...",
+    "location": "Location",
+    "priceRange": "Price Range",
+    "search": "SEARCH"
+  },
+  "features": {
+    "title": "Unlock Aljaber's",
+    "titleHighlight": "advantages",
+    "subtitle": "Your trusted real estate partner in every transaction."
+  },
+  "footer": {
+    "address": "Mars Residence, Dubai United Arab Emirates 337-1500",
+    "contact": "CONTACT",
+    "links": "Links",
+    "legal": "Legal",
+    "termsConditions": "Terms & conditions",
+    "cookie": "Cookie",
+    "privacyPolicy": "Privacy policy",
+    "faqs": "Faq's"
+  }
+}

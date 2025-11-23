@@ -1,8 +1,11 @@
 "use client";
 import Link from "next/link.js";
 import Image from "next/image";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 const NavMenu = () => {
+    const { t } = useTranslation();
+    
     return (
         <ul className="navbar-nav align-items-lg-center">
             <li className="d-block d-lg-none">
@@ -14,25 +17,25 @@ const NavMenu = () => {
                 </div>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" href="/">Home</Link>
+                <Link className="nav-link" href="/">{t('nav.home')}</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" href="/purchase">Purchase</Link>
+                <Link className="nav-link" href="/purchase">{t('nav.purchase')}</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" href="/about_us_01">About Us</Link>
+                <Link className="nav-link" href="/about_us_01">{t('nav.aboutUs')}</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" href="/sales">Sales</Link>
+                <Link className="nav-link" href="/sales">{t('nav.sales')}</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" href="/insurance">Insurance</Link>
+                <Link className="nav-link" href="/insurance">{t('nav.insurance')}</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" href="/blog_01">Blog</Link>
+                <Link className="nav-link" href="/blog_01">{t('nav.blog')}</Link>
             </li>
             <li className="nav-item">
-                <Link className="nav-link" href="/contact">Contact Us</Link>
+                <Link className="nav-link" href="/contact">{t('nav.contactUs')}</Link>
             </li>
         </ul>
     );

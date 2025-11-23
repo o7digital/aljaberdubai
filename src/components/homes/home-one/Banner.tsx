@@ -2,9 +2,11 @@
 import { useEffect, useRef } from "react"
 import Slider from "react-slick"
 import DropdownOne from "@/components/search-dropdown/home-dropdown/DropdownOne"
+import { useTranslation } from "@/contexts/TranslationContext"
 
 const Banner = () => {
    const sliderRef = useRef<Slider | null>(null)
+   const { t } = useTranslation();
 
    const settings = {
       dots: false,
@@ -73,7 +75,7 @@ const Banner = () => {
                      padding: '15px 30px',
                      borderRadius: '8px',
                      display: 'inline-block'
-                  }}>We've more than 745,000 apartments, place & plot.</p>
+                  }}>{t('banner.title')}</p>
                </div>
             </div>
             <div className="row">

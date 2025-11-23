@@ -4,10 +4,12 @@ import Link from "next/link"
 import Image from "next/image"
 import UseSticky from "@/hooks/UseSticky"
 import LoginModal from "@/modals/LoginModal"
+import { useTranslation } from "@/contexts/TranslationContext"
 
 const HeaderOne = ({ style }: any) => {
    
    const { sticky } = UseSticky();
+   const { t, locale, setLocale } = useTranslation();
 
    return (
       <>
@@ -30,8 +32,23 @@ const HeaderOne = ({ style }: any) => {
                      </div>
                      <div className="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
                         <ul className="d-flex align-items-center style-none">
+                           <li className="me-3">
+                              <button 
+                                 onClick={() => setLocale(locale === 'en' ? 'fr' : 'en')}
+                                 className="btn btn-sm"
+                                 style={{ 
+                                    border: '1px solid #000',
+                                    padding: '5px 15px',
+                                    borderRadius: '5px',
+                                    background: 'transparent',
+                                    fontWeight: '500'
+                                 }}
+                              >
+                                 {locale === 'en' ? 'FR' : 'EN'}
+                              </button>
+                           </li>
                            <li>
-                              <Link href="#" data-bs-toggle="modal" data-bs-target="#loginModal" className="btn-one"><i className="fa-regular fa-lock"></i> <span>Login</span></Link>
+                              <Link href="#" data-bs-toggle="modal" data-bs-target="#loginModal" className="btn-one"><i className="fa-regular fa-lock"></i> <span>{t('nav.login')}</span></Link>
                            </li>
                         </ul>
                      </div>
