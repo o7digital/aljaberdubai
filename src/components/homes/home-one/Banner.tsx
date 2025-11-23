@@ -65,16 +65,7 @@ const Banner = () => {
             </Slider>
          </div>
 
-         {/* Overlay pour améliorer la lisibilité du texte */}
-         <div className="position-absolute w-100 h-100" style={{ 
-            top: 0, 
-            left: 0, 
-            background: 'linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.6))',
-            zIndex: 1,
-            pointerEvents: 'none'
-         }} />
-
-         <div className="container position-relative" style={{ zIndex: 2 }}>
+         <div className="container position-relative" style={{ zIndex: 1 }}>
             <div className="row">
                <div className="col-xxl-10 col-xl-9 col-lg-10 col-md-10 m-auto">
                   <h1 className="hero-heading text-center wow fadeInUp">ALJABER <span className="d-inline-block position-relative">DUBAI <Image src={titleShape} alt="" className="lazy-img" /></span></h1>
