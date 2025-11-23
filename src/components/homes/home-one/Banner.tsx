@@ -58,7 +58,7 @@ const Banner = () => {
                         width: '100%',
                         height: '800px',
                         objectFit: 'cover',
-                        objectPosition: 'center'
+                        objectPosition: 'center top -30px'
                      }}
                   />
                </div>
@@ -68,8 +68,22 @@ const Banner = () => {
          <div className="container position-relative" style={{ zIndex: 1 }}>
             <div className="row">
                <div className="col-xxl-10 col-xl-9 col-lg-10 col-md-10 m-auto">
-                  <h1 className="hero-heading text-center wow fadeInUp">ALJABER <span className="d-inline-block position-relative">DUBAI <Image src={titleShape} alt="" className="lazy-img" /></span></h1>
-                  <p className="fs-24 color-dark text-center pt-35 pb-35 wow fadeInUp" data-wow-delay="0.1s">We've more than 745,000 apartments, place & plot.</p>
+                  <h1 className="hero-heading text-center wow fadeInUp" style={{
+                     backgroundColor: 'white',
+                     color: '#1a1a1a',
+                     padding: '20px 40px',
+                     borderRadius: '8px',
+                     display: 'inline-block',
+                     width: '100%'
+                  }}>ALJABER <span className="d-inline-block position-relative">DUBAI <Image src={titleShape} alt="" className="lazy-img" /></span></h1>
+                  <p className="fs-24 text-center pt-35 pb-35 wow fadeInUp" data-wow-delay="0.1s" style={{
+                     backgroundColor: 'white',
+                     color: '#1a1a1a',
+                     padding: '15px 30px',
+                     borderRadius: '8px',
+                     display: 'inline-block',
+                     width: '100%'
+                  }}>We've more than 745,000 apartments, place & plot.</p>
                </div>
             </div>
             <div className="row">
