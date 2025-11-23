@@ -48,6 +48,7 @@
 .theme-main-menu {
     position: relative;
     z-index: 999;
+    background: #fff;
     // box-shadow: 0 13px 35px -12px rgb(35 35 35 / 10%);
     @include transition(0.4s);
     .gap-one {

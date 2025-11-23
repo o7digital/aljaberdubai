@@ -1,20 +1,22 @@
 // Button Style
 .btn-one {
   font-weight: 500;
-  color: $color-one;
+  color: #fff;
   padding: 0 25px;
   min-width: 130px;
   text-align: center;
   line-height: 53px;
   border: 1px solid $color-one;
+  background: $color-one;
   border-radius: 10px;
   @include transition (0.3s);
   i {
       margin-right: 5px;
+      color: #fff;
   }
   &:hover, &:focus {
-    background: #000;
-    border-color: #000;
+    background: darken($color-one, 10%);
+    border-color: darken($color-one, 10%);
     color: #fff;
   }
 }

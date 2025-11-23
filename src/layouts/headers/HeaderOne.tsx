@@ -7,6 +7,7 @@ import UseSticky from "@/hooks/UseSticky"
 import LoginModal from "@/modals/LoginModal"
 
 import logo_1 from "@/assets/images/logo/logo_01.svg";
+import aljaberLogo from "@/assets/images/logo/aljaber-logo.svg";
 
 const HeaderOne = ({ style }: any) => {
    
@@ -19,8 +20,9 @@ const HeaderOne = ({ style }: any) => {
                <div className="top-header position-relative">
                   <div className="d-flex align-items-center justify-content-between">
                      <div className="logo order-lg-0">
-                        <Link href="/" className="d-flex align-items-center">
-                           <Image src={logo_1} alt="" />
+                        <Link href="/" className="d-flex align-items-center gap-3">
+                           <Image src={logo_1} alt="" style={{ maxHeight: '40px', width: 'auto' }} />
+                           <Image src={aljaberLogo} alt="Aljaber" style={{ maxHeight: '40px', width: 'auto' }} />
                         </Link>
                      </div>
                      <div className="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
