@@ -16,13 +16,13 @@ const HeaderOne = ({ style }: any) => {
                <div className="top-header position-relative">
                   <div className="d-flex align-items-center justify-content-between">
                      <div className="logo order-lg-0">
-                        <Link href="/" className="d-flex align-items-center gap-3 text-decoration-none">
+                        <Link href="/" className="d-flex align-items-center gap-4 text-decoration-none">
                            <Image
                               src="/logo/logo.png"
                               alt="ALJABER DUBAI logo"
-                              width={160}
-                              height={40}
-                              style={{ maxHeight: "40px", width: "auto" }}
+                              width={480}
+                              height={120}
+                              style={{ maxHeight: "120px", height: "auto", width: "auto" }}
                               priority
                            />
                            <span className="fw-semibold text-uppercase text-dark">ALJABER DUBAI</span>

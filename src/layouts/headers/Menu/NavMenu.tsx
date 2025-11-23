@@ -7,8 +7,8 @@ const NavMenu = () => {
         <ul className="navbar-nav align-items-lg-center">
             <li className="d-block d-lg-none">
                 <div className="logo">
-                    <Link href="/" className="d-inline-flex align-items-center gap-2 text-decoration-none">
-                        <Image src="/logo/logo.png" alt="ALJABER DUBAI logo" width={140} height={36} priority />
+                    <Link href="/" className="d-inline-flex align-items-center gap-3 text-decoration-none">
+                        <Image src="/logo/logo.png" alt="ALJABER DUBAI logo" width={420} height={108} priority style={{ maxHeight: "108px", height: "auto", width: "auto" }} />
                         <span className="fw-semibold text-uppercase text-dark">ALJABER DUBAI</span>
                     </Link>
                 </div>
