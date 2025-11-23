@@ -21,8 +21,8 @@ interface ContentType {
 const footer_content: ContentType = {
    title: "Our Newsletter",
    desc_1: "Get instant news by subscribe to our newsletter",
-   desc_2: "11910 Clyde Rapid Suite 210, Wil, Virginia, USA",
-   email: "homyreal@demo.com",
+   desc_2: "Mars Residence, Dubai United Arab Emirates 337-1500",
+   email: "info@aljaberdubai.ae",
    number: "+757 699-4478",
    icon: ["facebook-f", "twitter", "instagram"],
 }

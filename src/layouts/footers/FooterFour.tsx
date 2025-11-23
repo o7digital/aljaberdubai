@@ -18,8 +18,8 @@ const FooterFour = () => {
                               <Image src={footerLogo} alt="" />
                            </Link>
                         </div>
-                        <p className="mb-30 xs-mb-20">11910 Clyde Rapid Suite 210, Willyand, Virginia, United States</p>
-                        <Link href="#" className="email tran3s mb-60 md-mb-30">homyreal@demo.com</Link>
+                        <p className="mb-30 xs-mb-20">Mars Residence, Dubai United Arab Emirates 337-1500</p>
+                        <Link href="mailto:info@aljaberdubai.ae" className="email tran3s mb-60 md-mb-30">info@aljaberdubai.ae</Link>
                         <ul className="style-none d-flex align-items-center social-icon">
                            <li><Link href="#"><i className="fa-brands fa-facebook-f"></i></Link></li>
                            <li><Link href="#"><i className="fa-brands fa-twitter"></i></Link></li>
