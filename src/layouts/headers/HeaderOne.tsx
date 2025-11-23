@@ -15,7 +15,7 @@ const HeaderOne = ({ style }: any) => {
 
    return (
       <>
-         <header className={`theme-main-menu menu-overlay menu-style-one sticky-menu ${sticky ? "fixed" : ""}`}>
+         <header className={`theme-main-menu menu-style-one sticky-menu ${sticky ? "fixed" : ""}`}>
             <div className="inner-content gap-one">
                <div className="top-header position-relative">
                   <div className="d-flex align-items-center justify-content-between">
