@@ -53,7 +53,7 @@
     // box-shadow: 0 13px 35px -12px rgb(35 35 35 / 10%);
     @include transition(0.4s);
     .gap-one {
-        padding: 33px 40px;
+        padding: 15px 40px;
         overflow: visible;
     }
     .gap-two {
@@ -80,8 +80,8 @@
             display: none;
         }
         .gap-one {
-            padding-top: 12px;
-            padding-bottom: 12px;
+            padding-top: 10px;
+            padding-bottom: 10px;
         }
         .gap-two {
             padding-top: 12px;
