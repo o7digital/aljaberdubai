@@ -30,30 +30,24 @@ const Banner = () => {
    return (
       <div className="hero-banner-one z-1 pt-225 xl-pt-200 pb-250 xl-pb-150 lg-pb-100 position-relative" style={{ overflow: 'hidden' }}>
          {/* Background Slider */}
-         <div className="hero-slider-wrapper position-absolute w-100 h-100" style={{ top: 0, left: 0, zIndex: 0 }}>
-            <Slider ref={sliderRef} {...settings}>
-               <div className="slider-item">
+         <div className="hero-slider-wrapper position-absolute w-100 h-100" style={{ top: 0, left: 0, zIndex: -1 }}>
+            <Slider ref={sliderRef} {...settings} className="h-100">
+               <div className="slider-item" style={{ height: '100vh' }}>
                   <div className="slider-bg" style={{
                      backgroundImage: 'url(/slider/dubai1.jpg)',
                      backgroundSize: 'cover',
                      backgroundPosition: 'center',
                      width: '100%',
-                     height: '100%',
-                     position: 'absolute',
-                     top: 0,
-                     left: 0
+                     height: '100%'
                   }} />
                </div>
-               <div className="slider-item">
+               <div className="slider-item" style={{ height: '100vh' }}>
                   <div className="slider-bg" style={{
                      backgroundImage: 'url(/slider/dubai2.jpg)',
                      backgroundSize: 'cover',
                      backgroundPosition: 'center',
                      width: '100%',
-                     height: '100%',
-                     position: 'absolute',
-                     top: 0,
-                     left: 0
+                     height: '100%'
                   }} />
                </div>
             </Slider>
@@ -63,8 +57,8 @@ const Banner = () => {
          <div className="position-absolute w-100 h-100" style={{ 
             top: 0, 
             left: 0, 
-            background: 'rgba(255, 255, 255, 0.85)',
-            zIndex: 1 
+            background: 'linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5))',
+            zIndex: 0 
          }} />
 
          <div className="container position-relative" style={{ zIndex: 2 }}>
@@ -84,6 +78,17 @@ const Banner = () => {
                </div>
             </div>
          </div>
+
+         <style jsx>{`
+            .hero-slider-wrapper :global(.slick-slider),
+            .hero-slider-wrapper :global(.slick-list),
+            .hero-slider-wrapper :global(.slick-track) {
+               height: 100%;
+            }
+            .hero-slider-wrapper :global(.slick-slide) > div {
+               height: 100%;
+            }
+         `}</style>
       </div>
    )
 }
