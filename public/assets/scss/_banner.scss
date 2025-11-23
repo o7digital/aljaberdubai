@@ -80,6 +80,7 @@
     border-radius: 40px;
     overflow: hidden;
     margin: 0 40px 0;
+    background: transparent !important;
     &::after {
         display: none !important;
     }
@@ -93,6 +94,7 @@
         left: 0;
         top:0;
         z-index: -1;
+        filter: none !important;
         .hero-img {
             position: absolute;
             left: 0;
@@ -103,12 +105,18 @@
             background-size: cover;
             background-repeat: no-repeat;
             margin-bottom: -50px;
+            filter: none !important;
+            opacity: 1 !important;
         }
         .item:nth-child(2) .hero-img {
             background-position: center bottom;
             margin-bottom: -80px;
         }
-        .slick-list,.slick-track,.item {height: 100%;}
+        .slick-list,.slick-track,.item {
+            height: 100%;
+            filter: none !important;
+            opacity: 1 !important;
+        }
     }
 
     .hero-heading {
