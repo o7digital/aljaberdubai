@@ -49,12 +49,10 @@
     position: relative;
     z-index: 999;
     background: #fff;
-    overflow: visible;
     // box-shadow: 0 13px 35px -12px rgb(35 35 35 / 10%);
     @include transition(0.4s);
     .gap-one {
-        padding: 15px 40px;
-        overflow: visible;
+        padding: 33px 40px;
     }
     .gap-two {
         padding: 24px 40px;
@@ -80,8 +78,8 @@
             display: none;
         }
         .gap-one {
-            padding-top: 10px;
-            padding-bottom: 10px;
+            padding-top: 12px;
+            padding-bottom: 12px;
         }
         .gap-two {
             padding-top: 12px;

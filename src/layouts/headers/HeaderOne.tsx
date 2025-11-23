@@ -15,14 +15,14 @@ const HeaderOne = ({ style }: any) => {
             <div className="inner-content gap-one">
                <div className="top-header position-relative">
                   <div className="d-flex align-items-center justify-content-between">
-                     <div className="logo order-lg-0" style={{ overflow: "visible", position: "relative", zIndex: 1000 }}>
-                        <Link href="/" className="d-flex align-items-center gap-4 text-decoration-none" style={{ position: "relative", top: "0" }}>
+                     <div className="logo order-lg-0">
+                        <Link href="/" className="d-flex align-items-center gap-4 text-decoration-none">
                            <Image
                               src="/logo/logo.png"
                               alt="ALJABER DUBAI logo"
-                              width={672}
-                              height={168}
-                              style={{ height: "auto", width: "auto", transform: "scale(1.3)" }}
+                              width={160}
+                              height={40}
+                              style={{ maxHeight: "40px", width: "auto" }}
                               priority
                            />
                            <span className="fw-semibold text-uppercase text-dark">ALJABER DUBAI</span>
