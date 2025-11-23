@@ -18,7 +18,6 @@ const HomeOne = () => {
     <>
       <HeaderOne style={false} />
       <Banner />
-      <Feedback />
       <BLockFeatureOne />
       <BLockFeatureTwo />
       <BLockFeatureThree />
@@ -26,6 +25,7 @@ const HomeOne = () => {
       <FancyBannerOne style={false} />
       <AgentArea style={false} />
       <BLockFeatureFour />
+      <Feedback />
       <BLockFeatureFive style={false} />
       <FancyBanner style={false} />
       {/* <FancyBannerThree /> */}
