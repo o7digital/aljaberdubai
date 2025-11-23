@@ -1,6 +1,8 @@
 import NiceSelect from "@/ui/NiceSelect";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 const DropdownOne = ({ style }: any) => {
+   const { t } = useTranslation();
 
    const selectHandler = (e: any) => { };
 
@@ -11,16 +13,16 @@ const DropdownOne = ({ style }: any) => {
    return (
       <form onSubmit={(e) => { e.preventDefault(); searchHandler(); }}>
          <div className="row gx-0 align-items-center">
-            <div className="col-xl-3 col-lg-4">
+         <div className="col-xl-3 col-lg-4">
                <div className="input-box-one border-left">
-                  <div className="label">I’m looking to...</div>
+                  <div className="label">{t('banner.searchLabel')}</div>
                   <NiceSelect className={`nice-select ${style ? "fw-normal" : ""}`}
                      options={[
-                        { value: "apartments", text: "Buy Apartments" },
-                        { value: "condos", text: "Rent Condos" },
-                        { value: "houses", text: "Sell Houses" },
-                        { value: "industrial", text: "Rent Industrial" },
-                        { value: "villas", text: "Sell Villas" },
+                        { value: "apartments", text: t('searchDropdown.buyApartments') },
+                        { value: "condos", text: t('searchDropdown.rentCondos') },
+                        { value: "houses", text: t('searchDropdown.sellHouses') },
+                        { value: "industrial", text: t('searchDropdown.rentIndustrial') },
+                        { value: "villas", text: t('searchDropdown.sellVillas') },
                      ]}
                      defaultCurrent={0}
                      onChange={selectHandler}
@@ -30,7 +32,7 @@ const DropdownOne = ({ style }: any) => {
             </div>
             <div className={`${style ? "col-xl-3" : "col-xl-4"} col-lg-4`}>
                <div className="input-box-one border-left">
-                  <div className="label">Location</div>
+                  <div className="label">{t('banner.location')}</div>
                   <NiceSelect className={`nice-select location ${style ? "fw-normal" : ""}`}
                      options={[
                         { value: "germany", text: "Berlin, Germany" },
@@ -49,7 +51,7 @@ const DropdownOne = ({ style }: any) => {
             </div>
             <div className="col-xl-3 col-lg-4">
                <div className="input-box-one border-left border-lg-0">
-                  <div className="label">Price Range</div>
+                  <div className="label">{t('banner.priceRange')}</div>
                   <NiceSelect
                      className={`nice-select ${style ? "fw-normal" : ""}`}
                      options={[
@@ -65,7 +67,7 @@ const DropdownOne = ({ style }: any) => {
             </div>
             <div className={`${style ? "col-xl-3" : "col-xl-2"}`}>
                <div className="input-box-one lg-mt-10">
-                  <button className={`fw-500 tran3s ${style ? "w-100 tran3s search-btn-three" : "text-uppercase search-btn"}`}>{style ? "Search Now" : "Search"}</button>
+                  <button className={`fw-500 tran3s ${style ? "w-100 tran3s search-btn-three" : "text-uppercase search-btn"}`}>{style ? t('searchDropdown.searchNow') : t('banner.search')}</button>
                </div>
             </div>
          </div>

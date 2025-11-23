@@ -3,10 +3,12 @@ import Image from "next/image"
 import Link from "next/link";
 import agent_data from "@/data/home-data/AgentData";
 import Slider from "react-slick";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 import titleShape from "@/assets/images/shape/title_shape_05.svg"
 
 const AgentArea = ({ style }: any) => {
+   const { t } = useTranslation();
 
    const settings = {
       dots: true,
@@ -43,8 +45,8 @@ const AgentArea = ({ style }: any) => {
          <div className={`container ${style ? "container-large" : ""}`}>
             <div className="position-relative">
                <div className="title-one mb-85 lg-mb-50 wow fadeInLeft">
-                  <h3>Our <span>Agents{style?"":<Image src={titleShape} alt="" className="lazy-img" />}</span></h3>
-                  <p className="fs-22 mt-xs">Lorem  is placeholder text commonly used  graphic </p>
+                  <h3>{t('agents.our')} <span>{t('agents.agents')}{style?"":<Image src={titleShape} alt="" className="lazy-img" />}</span></h3>
+                  <p className="fs-22 mt-xs">{t('agents.subtitle')}</p>
                </div>
 
                <div className="wrapper position-relative z-1">
@@ -66,7 +68,7 @@ const AgentArea = ({ style }: any) => {
                </div>
 
                <div className="section-btn text-center md-mt-60">
-                  <Link href="agent" className={` ${style ? "btn-eight" : "btn-one fw-normal"}`}>Meet Entire Team</Link>
+                  <Link href="agent" className={` ${style ? "btn-eight" : "btn-one fw-normal"}`}>{t('agents.meetTeam')}</Link>
                </div>
             </div>
          </div>

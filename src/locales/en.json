@@ -16,10 +16,49 @@
     "priceRange": "Price Range",
     "search": "SEARCH"
   },
+  "searchDropdown": {
+    "buyApartments": "Buy Apartments",
+    "rentCondos": "Rent Condos",
+    "sellHouses": "Sell Houses",
+    "rentIndustrial": "Rent Industrial",
+    "sellVillas": "Sell Villas",
+    "searchNow": "Search Now"
+  },
   "features": {
     "title": "Unlock Aljaber's",
     "titleHighlight": "advantages",
     "subtitle": "Your trusted real estate partner in every transaction."
+  },
+  "property": {
+    "featured": "Featured",
+    "properties": "Properties",
+    "subtitle": "Explore latest & featured properties for sale.",
+    "forSale": "FOR SALE",
+    "forRent": "FOR RENT",
+    "sqft": "sqft",
+    "bed": "bed",
+    "bath": "bath"
+  },
+  "fancyBanner": {
+    "exclusive": "Exclusive",
+    "monthly": "Monthly",
+    "deal": "Deal for you.",
+    "subtitle": "Don't miss out on this personalized monthly exclusive offer for you.",
+    "moreDetails": "More Details",
+    "checkFullDetails": "Check Full Details",
+    "forSell": "FOR SELL"
+  },
+  "agents": {
+    "our": "Our",
+    "agents": "Agents",
+    "subtitle": "Lorem is placeholder text commonly used graphic",
+    "meetTeam": "Meet Entire Team"
+  },
+  "contact": {
+    "inquiry": "Any Inquiry?",
+    "feelFree": "Feel free",
+    "toContact": "To contact Us.",
+    "sendMessage": "SEND MESSAGE"
   },
   "footer": {
     "address": "Mars Residence, Dubai United Arab Emirates 337-1500",

@@ -16,10 +16,49 @@
     "priceRange": "Gamme de Prix",
     "search": "RECHERCHER"
   },
+  "searchDropdown": {
+    "buyApartments": "Acheter des Appartements",
+    "rentCondos": "Louer des Condos",
+    "sellHouses": "Vendre des Maisons",
+    "rentIndustrial": "Louer Industriel",
+    "sellVillas": "Vendre des Villas",
+    "searchNow": "Rechercher Maintenant"
+  },
   "features": {
     "title": "Découvrez les",
     "titleHighlight": "avantages",
     "subtitle": "Votre partenaire immobilier de confiance pour chaque transaction."
+  },
+  "property": {
+    "featured": "Sélection",
+    "properties": "Propriétés",
+    "subtitle": "Explorez les dernières propriétés en vedette à vendre.",
+    "forSale": "À VENDRE",
+    "forRent": "À LOUER",
+    "sqft": "m²",
+    "bed": "ch",
+    "bath": "sdb"
+  },
+  "fancyBanner": {
+    "exclusive": "Offre",
+    "monthly": "Mensuelle",
+    "deal": "Exclusive pour vous.",
+    "subtitle": "Ne manquez pas cette offre mensuelle exclusive personnalisée pour vous.",
+    "moreDetails": "Plus de Détails",
+    "checkFullDetails": "Voir Tous les Détails",
+    "forSell": "À VENDRE"
+  },
+  "agents": {
+    "our": "Nos",
+    "agents": "Agents",
+    "subtitle": "Lorem est un texte de remplissage couramment utilisé graphiquement",
+    "meetTeam": "Rencontrer Toute l'Équipe"
+  },
+  "contact": {
+    "inquiry": "Une Question ?",
+    "feelFree": "N'hésitez pas",
+    "toContact": "à nous contacter.",
+    "sendMessage": "ENVOYER UN MESSAGE"
   },
   "footer": {
     "address": "Mars Residence, Dubaï Émirats Arabes Unis 337-1500",

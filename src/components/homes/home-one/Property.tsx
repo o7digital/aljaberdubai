@@ -1,17 +1,21 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link";
 import property_data from "@/data/home-data/PropertyData";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 import titleShape from "@/assets/images/shape/title_shape_03.svg";
 
 const Property = () => {
+   const { t } = useTranslation();
+   
    return (
       <div className="property-listing-one bg-pink-two mt-150 xl-mt-120 pt-140 xl-pt-120 lg-pt-80 pb-180 xl-pb-120 lg-pb-100">
          <div className="container">
             <div className="position-relative">
                <div className="title-one text-center text-lg-start mb-45 xl-mb-30 lg-mb-20 wow fadeInUp">
-                  <h3>Featured <span>Properties <Image src={titleShape} alt="" className="lazy-img" /></span></h3>
-                  <p className="fs-22 mt-xs">Explore latest & featured properties for sale.</p>
+                  <h3>{t('property.featured')} <span>{t('property.properties')} <Image src={titleShape} alt="" className="lazy-img" /></span></h3>
+                  <p className="fs-22 mt-xs">{t('property.subtitle')}</p>
                </div>
 
                <div className="row gx-xxl-5">
