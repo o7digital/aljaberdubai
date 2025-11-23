@@ -60,7 +60,7 @@ const BLockFeatureThree = () => {
     <div className="block-feature-three mt-150 xl-mt-120">
       <div className="container">
         <div className="title-one text-center mb-75 xl-mb-50 md-mb-30 wow fadeInUp">
-          <h3>Explore Popular <span>Location <Image src={titleShape} alt="" className="lazy-img" /></span></h3>
+          <h3>Explore Our Last <span>Properties <Image src={titleShape} alt="" className="lazy-img" /></span></h3>
           <p className="fs-22">Explore the latest listings & projects in diverse areas</p>
         </div>
 
