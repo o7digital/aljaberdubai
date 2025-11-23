@@ -68,7 +68,7 @@ const Banner = () => {
             <div className="row">
                <div className="col-xxl-10 col-xl-9 col-lg-10 col-md-10 m-auto text-center">
                   <p className="fs-24 pt-35 pb-35 wow fadeInUp" data-wow-delay="0.1s" style={{
-                     backgroundColor: 'rgba(255, 255, 255, 0.3)',
+                     backgroundColor: '#ffffff',
                      color: '#1a1a1a',
                      padding: '15px 30px',
                      borderRadius: '8px',
