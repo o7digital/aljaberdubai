@@ -4,6 +4,7 @@ import Link from "next/link"
 
 import footerLogo from "@/assets/images/logo/logo_07.svg"
 import footer_data from "@/data/home-data/FooterData"
+import FooterKeywords from "./FooterKeywords"
 
 const FooterFive = () => {
    return (
@@ -64,6 +65,7 @@ const FooterFive = () => {
                   ))}
                </div>
             </div>
+            <FooterKeywords />
             <div className="bottom-footer">
                <p className="m0 text-center fs-16">Copyright @2024 Homy inc.</p>
             </div>

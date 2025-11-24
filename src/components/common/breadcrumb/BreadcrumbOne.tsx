@@ -6,7 +6,7 @@ const BreadcrumbOne = ({ title, sub_title, style, link, link_title }: any) => {
       <div className="inner-banner-one inner-banner text-center z-1 pt-160 lg-pt-130 pb-160 xl-pb-120 md-pb-80 position-relative" style={{ overflow: 'hidden' }}>
          <Image 
             src="/images/hammer-group-fxIcYymZHJg-unsplash.jpg" 
-            alt="About Us Hero" 
+            alt="propriétés prestige vue skyline Dubai" 
             fill
             style={{ objectFit: 'cover', objectPosition: 'center' }}
             priority

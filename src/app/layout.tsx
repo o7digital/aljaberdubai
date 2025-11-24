@@ -3,6 +3,8 @@ import "../styles/index.scss";
 import { Provider } from "react-redux";
 import store from "@/redux/store";
 import { TranslationProvider } from "@/contexts/TranslationContext";
+import StructuredData from "@/components/seo/StructuredData";
+import HiddenSeoKeywords, { combinedKeywords } from "@/components/seo/HiddenSeoKeywords";
 
 export default function RootLayout({
   children,
@@ -15,13 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={isDev}>
       <head>
-        <meta name="keywords" content="Real estate, Property sale, Property buy" />
-        <meta name="description" content="Homy is a beautiful website template designed for Real Estate Agency." />
-        <meta property="og:site_name" content="Homy" />
-        <meta property="og:url" content="https://creativegigstf.com" />
+        <meta name="keywords" content={combinedKeywords.join(", ")} />
+        <meta name="description" content="Al Jaber Dubai Real Estate, agence immobilière de luxe officielle à Dubai pour villas, penthouses et investissements premium." />
+        <meta property="og:site_name" content="Al Jaber Dubai Real Estate" />
+        <meta property="og:url" content="https://aljaberdubai.vercel.app/" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Homy - Real Estate React Next js Template" />
+        <meta property="og:title" content="Al Jaber Dubai - Luxury Real Estate Agency" />
         <meta name='og:image' content='images/assets/ogg.png' />
+        <StructuredData />
         {/* For IE  */}
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         {/* For Resposive Device */}
@@ -41,6 +44,7 @@ export default function RootLayout({
           <Provider store={store}>
             <TranslationProvider>
               {children}
+              <HiddenSeoKeywords />
             </TranslationProvider>
           </Provider>
         </div>

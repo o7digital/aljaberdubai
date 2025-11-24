@@ -65,7 +65,7 @@ const Banner = () => {
                <div style={{ height: '100%', width: '100%' }}>
                   <img 
                      src="/slider/dubai1.jpg"
-                     alt="Dubai"
+                     alt="villa de luxe Dubai immobilier premium exclusif"
                      style={{
                         width: '100%',
                         height: '800px',
@@ -77,7 +77,7 @@ const Banner = () => {
                <div style={{ height: '100%', width: '100%' }}>
                   <img 
                      src="/slider/dubai2.jpg"
-                     alt="Dubai"
+                     alt="Dubai penthouse luxury real estate"
                      style={{
                         width: '100%',
                         height: '800px',

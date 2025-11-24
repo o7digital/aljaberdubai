@@ -1,0 +1,25 @@
+"use client"
+
+const frenchKeywordBlock = `agence immobilière Dubai, immobilier de luxe Dubai, achat propriété Dubai, investir à Dubai, villa de luxe Dubai, penthouse Dubai, marina Dubai immobilier, Palm Jumeirah villa, Dubai Hills Estate, Emirats Arabes Unis immobilier, résidence premium Dubai, investissement immobilier Dubai, villa moderne Dubai, appartements luxe Dubai, loft Dubai, résidence exclusive Dubai, propriétés haut de gamme Dubai, luxury real estate Dubai, agence premium Dubai, real estate Dubai francophone, acheter villa Dubai, acheter appartement Dubai, Dubai expat immobilier, location propriété Dubai, gestion immobilière Dubai, propriétés VIP Dubai, niches premium Dubai, district immobilier Dubai, Emaar Dubai, Damac Dubai, Nakheel Dubai, soumission immobilière Dubai, investisseur francophone Dubai, marché immobilier Dubai, résidence sécurisée Dubai, maisons Dubai, appartement vue mer Dubai, immobilier bord de mer Dubai, exclusive Dubai listings, private real estate Dubai, investissement haut rendement Dubai, résidence Palm Dubai, Jumeirah immobilier, Bluewaters Island Dubai, Dubai luxury homes, maisons contemporaines Dubai, architecture moderne Dubai, vue mer Dubai, vue skyline Dubai, prestige property Dubai, premium property Dubai, villa avec piscine Dubai, villa front mer Dubai, achat premium Dubai, transaction sécurisée Dubai, accompagnement francophone Dubai, expert immobilier Dubai, discrétion immobilière Dubai, conciergerie immobilière Dubai, résidence secondaire Dubai, location saisonnière Dubai, property management Dubai, full service Dubai immobilier, high-end real estate Dubai, investisseur européen Dubai, fiscalité Dubai investissement, résidence fiscal Dubai, golden visa Dubai, résident Dubai, off-market Dubai properties, ultra-luxury Dubai, prix immobilier Dubai, opportunité Dubai, développement immobilier Dubai, quartiers Dubai premium, achat rapide Dubai, procédure achat Dubai, avocat Dubai immobilier, notaire Dubai équivalent, sécurisation transaction Dubai, financement achat Dubai, créer société Dubai, expatriation Dubai, déménagement Dubai, frais achat Dubai, Dubai lifestyle, taxes Dubai, ROI Dubai, rentabilité Dubai, investissement rentable Dubai, résidence long terme Dubai`;
+
+const englishKeywordBlock = `Dubai real estate agency, Dubai luxury real estate, buy property in Dubai, invest in Dubai, Dubai luxury villa, Dubai penthouse, Dubai Marina properties, Palm Jumeirah villa, Dubai Hills Estate properties, UAE real estate, premium real estate Dubai, investment property Dubai, modern villa Dubai, luxury apartments Dubai, Dubai loft, exclusive residences Dubai, high-end properties Dubai, Dubai property market, premium agency Dubai, French Dubai real estate, property for sale Dubai, buy apartment Dubai, Dubai expat property, long-term rental Dubai, property management Dubai, VIP properties Dubai, Dubai prime real estate, Dubai property district, Emaar real estate Dubai, Damac Dubai properties, Nakheel properties Dubai, real estate listings Dubai, French investor Dubai, Dubai housing market, secure residence Dubai, Dubai homes, seafront apartment Dubai, waterfront real estate Dubai, exclusive Dubai listings, private property Dubai, high return investment Dubai, Palm residence Dubai, Jumeirah real estate, Bluewaters Island Dubai, Dubai luxury homes, contemporary homes Dubai, modern architecture Dubai, sea view Dubai, Dubai skyline view, prestige real estate Dubai, premium property Dubai, villa with pool Dubai, beachfront villa Dubai, premium property purchase Dubai, secure transaction Dubai, French-speaking agent Dubai, Dubai real estate expert, confidential property Dubai, Dubai property concierge, secondary residence Dubai, holiday rentals Dubai, property management Dubai, full-service agency Dubai, high-end Dubai homes, European investor Dubai, Dubai investment taxation, Dubai residency, residential Dubai properties, off-market Dubai properties, ultra-luxury real estate Dubai, Dubai house prices, Dubai opportunities, Dubai property developments, Dubai premium districts, fast purchase Dubai, Dubai buying process, Dubai lawyer real estate, Dubai legal check, secure property transfer Dubai, Dubai financing, create company in Dubai, relocation to Dubai, move to Dubai, Dubai property fees, Dubai lifestyle, Dubai taxes, Dubai ROI, Dubai profitability, profitable investment Dubai`;
+
+export const frenchKeywords = frenchKeywordBlock.split(",").map((keyword) => keyword.trim()).filter(Boolean);
+export const englishKeywords = englishKeywordBlock.split(",").map((keyword) => keyword.trim()).filter(Boolean);
+export const combinedKeywords = [...frenchKeywords, ...englishKeywords];
+
+const HiddenSeoKeywords = () => {
+  const hiddenPayload = JSON.stringify({ frenchKeywords, englishKeywords });
+
+  return (
+    <div style={{ display: "none" }} aria-hidden="true">
+      {combinedKeywords.join(", ")}
+      <script
+        type="application/json"
+        dangerouslySetInnerHTML={{ __html: hiddenPayload }}
+      />
+    </div>
+  );
+};
+
+export default HiddenSeoKeywords;
