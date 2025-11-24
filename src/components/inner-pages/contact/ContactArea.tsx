@@ -1,5 +1,7 @@
+"use client"
 import Link from "next/link"
 import Image from "next/image"
+import { useTranslation } from "@/contexts/TranslationContext"
 
 import circleImg from "@/assets/images/icon/icon_39.svg"
 import ContactForm from "@/components/forms/ContactForm";
@@ -39,7 +41,7 @@ const ContactArea = () => {
             <div className="row">
                <div className="col-xxl-9 col-xl-8 col-lg-10 m-auto">
                   <div className="title-one text-center wow fadeInUp">
-                     <h3>Questions? Feel Free to Reach Out Via Message.</h3>
+                     <h3>{t('contact.mainTitle')}</h3>
                   </div>
                </div>
             </div>

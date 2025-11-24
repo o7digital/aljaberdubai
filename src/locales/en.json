@@ -151,5 +151,11 @@
     "cookie": "Cookie",
     "privacyPolicy": "Privacy policy",
     "faqs": "Faq's"
+  },
+  "contact": {
+    "mainTitle": "Questions? Feel Free to Reach Out Via Message.",
+    "helpTitle": "We're always happy to help.",
+    "hotlineTitle": "Our hotline number",
+    "liveChatTitle": "Live chat"
   }
 }
