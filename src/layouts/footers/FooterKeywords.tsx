@@ -1,6 +1,7 @@
 "use client"
 
 import type { CSSProperties } from "react";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 const frenchVisibleKeywords = [
   "Agence immobilière à Dubai",
@@ -49,62 +50,28 @@ const englishVisibleKeywords = [
 ];
 
 const FooterKeywords = () => {
+  const { locale } = useTranslation();
+  const isFrench = locale === "fr";
+  const visibleKeywords = isFrench ? frenchVisibleKeywords : englishVisibleKeywords;
+
   const wrapperStyle: CSSProperties = {
-    marginTop: "18px",
-    paddingTop: "14px",
-    borderTop: "1px solid rgba(15, 23, 42, 0.08)",
-  };
-
-  const listStyle: CSSProperties = {
-    listStyle: "none",
-    padding: 0,
-    margin: 0,
-    display: "flex",
-    flexWrap: "wrap",
-    gap: "8px 12px",
-  };
-
-  const itemStyle: CSSProperties = {
-    color: "#374151",
-    fontSize: "13px",
-    letterSpacing: "0.01em",
-    lineHeight: 1.5,
+    marginTop: "14px",
+    paddingTop: "10px",
+    borderTop: "1px solid rgba(0, 0, 0, 0.06)",
+    color: "#777",
+    fontSize: "11px",
+    lineHeight: 1.6,
     fontWeight: 500,
-    backgroundColor: "transparent",
-    padding: "0",
   };
 
-  const sectionStyle: CSSProperties = {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-    gap: "12px 18px",
-    width: "100%",
+  const textStyle: CSSProperties = {
+    margin: 0,
+    display: "block",
   };
 
   return (
-    <div className="footer-keywords" style={wrapperStyle}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px", flexWrap: "wrap", gap: "6px" }}>
-        <h5 style={{ margin: 0, fontWeight: 600, letterSpacing: "0.01em", color: "#0f172a", fontSize: "15px" }}>Dubai Real Estate Keywords</h5>
-        <span style={{ fontSize: "12px", color: "#6b7280" }}>Discrets mais lisibles (FR / EN)</span>
-      </div>
-      <div style={sectionStyle}>
-        <div>
-          <h6 style={{ margin: "0 0 6px", color: "#111827", fontSize: "13px", fontWeight: 600 }}>🇫🇷 Français</h6>
-          <ul style={listStyle}>
-            {frenchVisibleKeywords.map((keyword) => (
-              <li key={keyword} style={itemStyle}>{keyword}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h6 style={{ margin: "0 0 6px", color: "#111827", fontSize: "13px", fontWeight: 600 }}>🇬🇧 English</h6>
-          <ul style={listStyle}>
-            {englishVisibleKeywords.map((keyword) => (
-              <li key={keyword} style={itemStyle}>{keyword}</li>
-            ))}
-          </ul>
-        </div>
-      </div>
+    <div className="footer-keywords" style={wrapperStyle} aria-label={isFrench ? "Mots-clés immobiliers" : "Real estate keywords"}>
+      <span style={textStyle}>{visibleKeywords.join(" • ")}</span>
     </div>
   );
 };
