@@ -6,7 +6,23 @@ import { useTranslation } from "@/contexts/TranslationContext"
 
 const Banner = () => {
    const sliderRef = useRef<Slider | null>(null)
-   const { t } = useTranslation();
+   const { t, locale } = useTranslation();
+   const [currentTextIndex, setCurrentTextIndex] = useState(0);
+
+   const rotatingTexts = {
+      en: [
+         "We've more than 745,000 apartments, place & plot.",
+         "Discover your dream home in Dubai's finest locations.",
+         "Luxury properties with breathtaking views of the city.",
+         "Your perfect investment starts here with Aljaber Dubai."
+      ],
+      fr: [
+         "Nous avons plus de 745 000 appartements, places et terrains.",
+         "Découvrez la maison de vos rêves dans les meilleurs quartiers de Dubaï.",
+         "Propriétés de luxe avec des vues imprenables sur la ville.",
+         "Votre investissement parfait commence ici avec Aljaber Dubaï."
+      ]
+   };
 
    const settings = {
       dots: false,
@@ -26,6 +42,14 @@ const Banner = () => {
          slider.slickPlay()
       }
    }, [])
+
+   useEffect(() => {
+      const interval = setInterval(() => {
+         setCurrentTextIndex((prevIndex) => (prevIndex + 1) % 4);
+      }, 5000);
+
+      return () => clearInterval(interval);
+   }, []);
 
    return (
       <div className="hero-banner-one z-1 pt-225 xl-pt-200 pb-250 xl-pb-150 lg-pb-100 position-relative" style={{ overflow: 'hidden', minHeight: '800px' }}>
@@ -69,13 +93,24 @@ const Banner = () => {
          <div className="container position-relative" style={{ zIndex: 1 }}>
             <div className="row">
                <div className="col-xxl-10 col-xl-9 col-lg-10 col-md-10 m-auto text-center">
-                  <p className="fs-24 pt-35 pb-35 wow fadeInUp" data-wow-delay="0.1s" style={{
-                     backgroundColor: '#ffffff',
-                     color: '#1a1a1a',
-                     padding: '15px 30px',
-                     borderRadius: '8px',
-                     display: 'inline-block'
-                  }}>{t('banner.title')}</p>
+                  <p 
+                     className="fs-24 pt-35 pb-35 wow fadeInUp animated-text" 
+                     data-wow-delay="0.1s" 
+                     style={{
+                        backgroundColor: '#ffffff',
+                        color: '#1a1a1a',
+                        padding: '15px 30px',
+                        borderRadius: '8px',
+                        display: 'inline-block',
+                        minHeight: '70px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                     }}
+                     key={currentTextIndex}
+                  >
+                     {rotatingTexts[locale as keyof typeof rotatingTexts][currentTextIndex]}
+                  </p>
                </div>
             </div>
             
@@ -113,6 +148,22 @@ const Banner = () => {
             .hero-slider-wrapper :global(.slick-slide) > div {
                height: 100% !important;
                display: block !important;
+            }
+
+            /* Animation du texte qui change */
+            .animated-text {
+               animation: fadeInText 1s ease-in-out;
+            }
+
+            @keyframes fadeInText {
+               0% {
+                  opacity: 0;
+                  transform: translateY(10px);
+               }
+               100% {
+                  opacity: 1;
+                  transform: translateY(0);
+               }
             }
 
             /* Technique d'affichage au survol/touch */
