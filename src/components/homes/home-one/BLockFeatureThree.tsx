@@ -4,6 +4,7 @@ import Link from "next/link";
 import feature_data from "@/data/home-data/FeatureData";
 import Slider from "react-slick";
 import React, { useRef } from "react";
+import { useTranslation } from "@/contexts/TranslationContext";
 
 import titleShape from "@/assets/images/shape/title_shape_02.svg";
 
@@ -41,7 +42,7 @@ const setting = {
 }
 
 const BLockFeatureThree = () => {
-
+  const { t } = useTranslation();
   const sliderRef = useRef<Slider | null>(null);
 
   const handlePrevClick = () => {
@@ -60,8 +61,8 @@ const BLockFeatureThree = () => {
     <div className="block-feature-three mt-150 xl-mt-120">
       <div className="container">
         <div className="title-one text-center mb-75 xl-mb-50 md-mb-30 wow fadeInUp">
-          <h3>Explore Our Last <span>Properties <Image src={titleShape} alt="" className="lazy-img" /></span></h3>
-          <p className="fs-22">Explore the latest listings & projects in diverse areas</p>
+          <h3>{t('exploreSection.title')} <span>{t('exploreSection.properties')} <Image src={titleShape} alt="" className="lazy-img" /></span></h3>
+          <p className="fs-22">{t('exploreSection.subtitle')}</p>
         </div>
 
         <Slider {...setting} ref={sliderRef} className="property-location-slider-one">

@@ -27,7 +27,16 @@
   "features": {
     "title": "Unlock Aljaber's",
     "titleHighlight": "advantages",
-    "subtitle": "Your trusted real estate partner in every transaction."
+    "subtitle": "Your trusted real estate partner in every transaction.",
+    "buyHome": "Buy a home",
+    "buyHomeDesc": "Explore homy's 2 million+ homes and uncover your ideal living space.",
+    "findHome": "Find Home",
+    "rentHome": "Rent a Home",
+    "rentHomeDesc": "Discover a rental you'll love on homy, thanks to 35+ filters and tailored keywords.",
+    "rentHomeBtn": "Rent Home",
+    "sellProperty": "Sell Property",
+    "sellPropertyDesc": "List, sell, thrive – with our top-notch real estate agency. It's super easy & fun.",
+    "sellPropertyBtn": "Sell Property"
   },
   "property": {
     "featured": "Featured",
@@ -59,6 +68,60 @@
     "feelFree": "Feel free",
     "toContact": "To contact Us.",
     "sendMessage": "SEND MESSAGE"
+  },
+  "aboutSection": {
+    "whoWeAre": "Who we are?",
+    "yearsExperience": "Years Experience\nwith proud.",
+    "completedProject": "Completed Project",
+    "happyCustomers": "Happy Customers",
+    "loanFacility": "Loan & low Interest facility",
+    "propertyUpdate": "Over 100k+ property & update regularly",
+    "expertAgent": "Expert agent consultation",
+    "moreDetails": "More Details",
+    "requestCallback": "Request a Callback",
+    "subtitle": "Your premier partner in real estate.",
+    "description": "Transforming properties into dreams. Let us guide you home with expertise."
+  },
+  "exploreSection": {
+    "title": "Explore Our Last",
+    "properties": "Properties",
+    "subtitle": "Explore the latest listings & projects in diverse areas"
+  },
+  "estimateSection": {
+    "label": "CB ESTIMATE",
+    "title": "Get quick",
+    "titleHighlight": "estimate",
+    "titleEnd": "on your home.",
+    "subtitle": "Master your property's valuation for a poised entry into the real estate market, armed with self-assurance and insight.",
+    "placeholder": "Your Email Address...",
+    "button": "Find out",
+    "accurateInfo": "*For accurate info please",
+    "contactUs": "contact us.",
+    "yourEstimate": "Your estimate is in!",
+    "findOut": "Find out"
+  },
+  "stepsSection": {
+    "title": "We'r here to help",
+    "subtitle": "you get your dream home",
+    "easyStart": "It's easy to start with us with these simple steps",
+    "createAccount": "Create Account",
+    "createAccountDesc": "It's very easy to open an account and start your journey.",
+    "findHome": "Find Home",
+    "findHomeDesc": "Complete your profile with all the info to get attention of client.",
+    "quickProcess": "Quick Process",
+    "quickProcessDesc": "Apply & get your preferable jobs with all the requirements and get it."
+  },
+  "journeySection": {
+    "title": "Start your Journey",
+    "asRetailer": "As a Retailer.",
+    "emailPlaceholder": "Email address",
+    "getStarted": "Get Started",
+    "alreadyAgent": "Already a Agent?",
+    "signIn": "Sign in."
+  },
+  "testimonials": {
+    "efficient": "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
+    "rating": "13k rating (4.7 Rating)"
   },
   "footer": {
     "address": "Mars Residence, Dubai United Arab Emirates 337-1500",

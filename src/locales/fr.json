@@ -27,7 +27,16 @@
   "features": {
     "title": "Découvrez les",
     "titleHighlight": "avantages",
-    "subtitle": "Votre partenaire immobilier de confiance pour chaque transaction."
+    "subtitle": "Votre partenaire immobilier de confiance pour chaque transaction.",
+    "buyHome": "Acheter une Maison",
+    "buyHomeDesc": "Explorez les 2 millions+ de maisons de homy et découvrez votre espace de vie idéal.",
+    "findHome": "Trouver une Maison",
+    "rentHome": "Louer une Maison",
+    "rentHomeDesc": "Découvrez une location que vous allez adorer sur homy, grâce à plus de 35 filtres et mots-clés personnalisés.",
+    "rentHomeBtn": "Louer une Maison",
+    "sellProperty": "Vendre une Propriété",
+    "sellPropertyDesc": "Listez, vendez, prospérez - avec notre agence immobilière de premier ordre. C'est super facile et amusant.",
+    "sellPropertyBtn": "Vendre une Propriété"
   },
   "property": {
     "featured": "Sélection",
@@ -59,6 +68,60 @@
     "feelFree": "N'hésitez pas",
     "toContact": "à nous contacter.",
     "sendMessage": "ENVOYER UN MESSAGE"
+  },
+  "aboutSection": {
+    "whoWeAre": "Qui sommes-nous ?",
+    "yearsExperience": "Années d'Expérience\navec fierté.",
+    "completedProject": "Projets Complétés",
+    "happyCustomers": "Clients Satisfaits",
+    "loanFacility": "Prêt & Taux d'intérêt bas",
+    "propertyUpdate": "Plus de 100k+ propriétés & mises à jour régulières",
+    "expertAgent": "Consultation d'agent expert",
+    "moreDetails": "Plus de Détails",
+    "requestCallback": "Demander un Rappel",
+    "subtitle": "Votre partenaire principal dans l'immobilier.",
+    "description": "Transformer les propriétés en rêves. Laissez-nous vous guider avec expertise."
+  },
+  "exploreSection": {
+    "title": "Explorez Nos Dernières",
+    "properties": "Propriétés",
+    "subtitle": "Explorez les dernières annonces et projets dans divers domaines"
+  },
+  "estimateSection": {
+    "label": "CB ESTIMATION",
+    "title": "Obtenez une estimation",
+    "titleHighlight": "rapide",
+    "titleEnd": "de votre maison.",
+    "subtitle": "Maîtrisez l'évaluation de votre propriété pour une entrée assurée sur le marché immobilier, armé de confiance et de perspicacité.",
+    "placeholder": "Votre adresse e-mail...",
+    "button": "Découvrir",
+    "accurateInfo": "*Pour des informations précises, veuillez",
+    "contactUs": "nous contacter.",
+    "yourEstimate": "Votre estimation est là !",
+    "findOut": "Découvrir"
+  },
+  "stepsSection": {
+    "title": "Nous sommes là pour vous aider",
+    "subtitle": "à obtenir la maison de vos rêves",
+    "easyStart": "C'est facile de commencer avec nous avec ces étapes simples",
+    "createAccount": "Créer un Compte",
+    "createAccountDesc": "Il est très facile d'ouvrir un compte et de commencer votre voyage.",
+    "findHome": "Trouver une Maison",
+    "findHomeDesc": "Complétez votre profil avec toutes les informations pour attirer l'attention du client.",
+    "quickProcess": "Processus Rapide",
+    "quickProcessDesc": "Postulez et obtenez vos emplois préférables avec toutes les exigences et obtenez-le."
+  },
+  "journeySection": {
+    "title": "Commencez votre Voyage",
+    "asRetailer": "En tant que Détaillant.",
+    "emailPlaceholder": "Adresse e-mail",
+    "getStarted": "Commencer",
+    "alreadyAgent": "Déjà un Agent ?",
+    "signIn": "Se connecter."
+  },
+  "testimonials": {
+    "efficient": "Efficace, compétent, et a rendu notre recherche de maison une expérience fluide. Agence hautement recommandée !",
+    "rating": "13k évaluations (4.7 Note)"
   },
   "footer": {
     "address": "Mars Residence, Dubaï Émirats Arabes Unis 337-1500",
