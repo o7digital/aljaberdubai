@@ -12,7 +12,7 @@ interface TranslationContextType {
 const TranslationContext = createContext<TranslationContextType | undefined>(undefined)
 
 export function TranslationProvider({ children }: { children: ReactNode }) {
-  const [locale, setLocaleState] = useState<Locale>('en')
+  const [locale, setLocaleState] = useState<Locale>('fr')
   const [messages, setMessages] = useState<any>({})
 
   useEffect(() => {
@@ -20,6 +20,10 @@ export function TranslationProvider({ children }: { children: ReactNode }) {
     const savedLocale = localStorage.getItem('locale') as Locale
     if (savedLocale) {
       setLocaleState(savedLocale)
+    } else {
+      // Par défaut en français si aucune langue sauvegardée
+      setLocaleState('fr')
+      localStorage.setItem('locale', 'fr')
     }
   }, [])
 
