@@ -107,10 +107,10 @@ const Banner = () => {
             
             /* Search bar cachée par défaut */
             .search-hover-container {
-               opacity: 0;
-               transform: translateY(20px);
+               opacity: 0.4;
+               transform: translateY(0);
                transition: all 0.4s ease;
-               pointer-events: none;
+               pointer-events: auto;
             }
             
             /* Search bar visible au survol ou au focus */
@@ -124,7 +124,7 @@ const Banner = () => {
             /* Sur mobile, afficher au tap (touch) */
             @media (max-width: 991px) {
                .search-hover-container {
-                  opacity: 0.3;
+                  opacity: 0.5;
                   pointer-events: auto;
                }
                
