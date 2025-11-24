@@ -7,7 +7,6 @@ import { useTranslation } from "@/contexts/TranslationContext"
 const Banner = () => {
    const sliderRef = useRef<Slider | null>(null)
    const { t } = useTranslation();
-   const [showSearch, setShowSearch] = useState(false);
 
    const settings = {
       dots: false,
@@ -79,30 +78,11 @@ const Banner = () => {
                   }}>{t('banner.title')}</p>
                </div>
             </div>
-            {/* Bouton pour afficher la search bar sur mobile */}
-            <div className="row d-lg-none mb-3">
-               <div className="col-12 text-center">
-                  <button 
-                     onClick={() => setShowSearch(!showSearch)}
-                     className="btn btn-primary"
-                     style={{
-                        backgroundColor: '#ff5722',
-                        border: 'none',
-                        padding: '12px 30px',
-                        borderRadius: '8px',
-                        fontSize: '16px',
-                        fontWeight: '500'
-                     }}
-                  >
-                     {showSearch ? '✕ Fermer la recherche' : '🔍 Rechercher un bien'}
-                  </button>
-               </div>
-            </div>
             
-            {/* Search bar - visible sur desktop, collapsible sur mobile */}
-            <div className={`row ${showSearch ? 'd-block' : 'd-none d-lg-block'}`}>
+            {/* Search bar - caché par défaut, visible au hover/tap */}
+            <div className="row">
                <div className="col-xxl-10 m-auto">
-                  <div className="search-wrapper-one layout-one bg position-relative">
+                  <div className="search-wrapper-one layout-one bg position-relative search-hover-container">
                      <div className="bg-wrapper">
                         <DropdownOne style={false} />
                      </div>
@@ -123,6 +103,36 @@ const Banner = () => {
             .hero-slider-wrapper :global(.slick-slide) > div {
                height: 100% !important;
                display: block !important;
+            }
+            
+            /* Search bar cachée par défaut */
+            .search-hover-container {
+               opacity: 0;
+               transform: translateY(20px);
+               transition: all 0.4s ease;
+               pointer-events: none;
+            }
+            
+            /* Search bar visible au survol ou au focus */
+            .search-hover-container:hover,
+            .search-hover-container:focus-within {
+               opacity: 1;
+               transform: translateY(0);
+               pointer-events: auto;
+            }
+            
+            /* Sur mobile, afficher au tap (touch) */
+            @media (max-width: 991px) {
+               .search-hover-container {
+                  opacity: 0.3;
+                  pointer-events: auto;
+               }
+               
+               .search-hover-container:active,
+               .search-hover-container:focus-within {
+                  opacity: 1;
+                  transform: translateY(0);
+               }
             }
          `}</style>
       </div>
