@@ -14,28 +14,28 @@ interface DataType {
    address_2?: string;
 }
 
-const address_data: DataType[] = [
-   {
-      id: 1,
-      title: "We're always happy to help.",
-      address_1: "info@aljaberdubai.ae"
-   },
-   {
-      id: 2,
-      class_name: "skew-line",
-      title: "Our hotline number",
-      address_1: "+971 4 123 4567",
-      address_2: "+971 50 123 4567",
-   },
-   {
-      id: 3,
-      title: "Live chat",
-      address_1: "www.aljaberdubai.ae"
-   },
-]
-
 const ContactArea = () => {
    const { t } = useTranslation();
+   
+   const address_data: DataType[] = [
+      {
+         id: 1,
+         title: t('contact.helpTitle'),
+         address_1: "info@aljaberdubai.ae"
+      },
+      {
+         id: 2,
+         class_name: "skew-line",
+         title: t('contact.hotlineTitle'),
+         address_1: "+971 4 123 4567",
+         address_2: "+971 50 123 4567",
+      },
+      {
+         id: 3,
+         title: t('contact.liveChatTitle'),
+         address_1: "www.aljaberdubai.ae"
+      },
+   ];
    
    return (
       <div className="contact-us border-top mt-130 xl-mt-100 pt-80 lg-pt-60">
@@ -43,7 +43,7 @@ const ContactArea = () => {
             <div className="row">
                <div className="col-xxl-9 col-xl-8 col-lg-10 m-auto">
                   <div className="title-one text-center wow fadeInUp">
-                     <h3>Questions? Feel Free to Reach Out Via Message.</h3>
+                     <h3>{t('contact.mainTitle')}</h3>
                   </div>
                </div>
             </div>
