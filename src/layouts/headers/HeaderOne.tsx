@@ -45,16 +45,18 @@ const HeaderOne = ({ style }: any) => {
                            <li className="me-3">
                               <button 
                                  onClick={() => setLocale(locale === 'en' ? 'fr' : 'en')}
-                                 className="btn btn-sm"
+                                 className="btn btn-sm d-flex align-items-center gap-1"
                                  style={{ 
                                     border: '1px solid #000',
-                                    padding: '5px 15px',
+                                    padding: '6px 15px',
                                     borderRadius: '5px',
                                     background: 'transparent',
-                                    fontWeight: '500'
+                                    fontWeight: '500',
+                                    fontSize: '14px'
                                  }}
+                                 title={locale === 'en' ? 'Passer en français' : 'Switch to English'}
                               >
-                                 {locale === 'en' ? 'FR' : 'EN'}
+                                 {locale === 'en' ? '🇫🇷 FR' : '🇬🇧 EN'}
                               </button>
                            </li>
                            <li className="d-none d-lg-block">
