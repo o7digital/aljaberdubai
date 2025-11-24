@@ -69,7 +69,11 @@ const HeaderOne = ({ style }: any) => {
                         <ul className="d-flex align-items-center style-none">
                            <li className="me-3">
                               <button 
-                                 onClick={() => setLocale(locale === 'en' ? 'fr' : 'en')}
+                                 onClick={() => {
+                                    const newLocale = locale === 'en' ? 'fr' : 'en';
+                                    console.log('Changing locale from', locale, 'to', newLocale);
+                                    setLocale(newLocale);
+                                 }}
                                  className="btn btn-sm d-flex align-items-center gap-1"
                                  style={{ 
                                     border: '1px solid #000',
@@ -77,7 +81,8 @@ const HeaderOne = ({ style }: any) => {
                                     borderRadius: '5px',
                                     background: 'transparent',
                                     fontWeight: '500',
-                                    fontSize: '14px'
+                                    fontSize: '14px',
+                                    cursor: 'pointer'
                                  }}
                                  title={locale === 'en' ? 'Passer en français' : 'Switch to English'}
                               >
