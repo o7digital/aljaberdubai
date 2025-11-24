@@ -18,7 +18,7 @@ const HeaderOne = ({ style }: any) => {
                <div className="top-header position-relative">
                   <div className="d-flex align-items-center justify-content-between">
                      <div className="logo order-lg-0" style={{ position: "relative", zIndex: 1000 }}>
-                        <Link href="/" className="d-flex align-items-center gap-2 gap-lg-4 text-decoration-none">
+                        <Link href="/" className="d-flex align-items-center gap-2 gap-lg-3 text-decoration-none">
                            <Image
                               src="/logo/logo.png"
                               alt="ALJABER DUBAI logo"
@@ -37,7 +37,32 @@ const HeaderOne = ({ style }: any) => {
                               className="d-none d-lg-block"
                               priority
                            />
-                           <span className="fw-semibold text-uppercase text-dark" style={{ fontSize: "14px" }}>ALJABER<br className="d-lg-none" /> DUBAI</span>
+                           <div className="d-flex flex-column" style={{ lineHeight: "1.1" }}>
+                              <span 
+                                 className="text-uppercase" 
+                                 style={{ 
+                                    fontSize: "clamp(16px, 2.5vw, 24px)",
+                                    fontWeight: "700",
+                                    letterSpacing: "2px",
+                                    color: "#1a1a1a",
+                                    fontFamily: "'Montserrat', 'Arial', sans-serif"
+                                 }}
+                              >
+                                 ALJABER
+                              </span>
+                              <span 
+                                 className="text-capitalize" 
+                                 style={{ 
+                                    fontSize: "clamp(14px, 2vw, 20px)",
+                                    fontWeight: "300",
+                                    letterSpacing: "3px",
+                                    color: "#1a1a1a",
+                                    fontFamily: "'Montserrat', 'Arial', sans-serif"
+                                 }}
+                              >
+                                 Dubai
+                              </span>
+                           </div>
                         </Link>
                      </div>
                      <div className="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
