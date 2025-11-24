@@ -101,7 +101,6 @@ const Banner = () => {
                         color: '#1a1a1a',
                         padding: '15px 30px',
                         borderRadius: '8px',
-                        display: 'inline-block',
                         minHeight: '70px',
                         display: 'flex',
                         alignItems: 'center',
