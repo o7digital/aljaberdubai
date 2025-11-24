@@ -1,5 +1,5 @@
 "use client"
-import React, { useState, useCallback, useRef, FC, ChangeEvent } from "react";
+import React, { useState, useCallback, useRef, FC, ChangeEvent, useEffect } from "react";
 import { useClickAway } from "react-use";
 
 interface Option {
@@ -32,6 +32,13 @@ const NiceSelect: FC<NiceSelectProps> = ({
   const ref = useRef<HTMLDivElement | null>(null);
 
   useClickAway(ref, onClose);
+
+  // Update current when options change (e.g., when translations load)
+  useEffect(() => {
+    if (options && options[defaultCurrent]) {
+      setCurrent(options[defaultCurrent]);
+    }
+  }, [options, defaultCurrent]);
 
   const currentHandler = (item: Option) => {
     setCurrent(item);
