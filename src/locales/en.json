@@ -120,8 +120,27 @@
     "signIn": "Sign in."
   },
   "testimonials": {
-    "efficient": "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
-    "rating": "13k rating (4.7 Rating)"
+    "testimonial1": {
+      "name": "Jonathan Harry",
+      "location": "Milan, Italy",
+      "text": "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
+      "rating": "13k rating",
+      "ratingScore": "(4.7 Rating)"
+    },
+    "testimonial2": {
+      "name": "Sofia Rena",
+      "location": "New York, USA",
+      "text": "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
+      "rating": "10k rating",
+      "ratingScore": "(4.5 Rating)"
+    },
+    "testimonial3": {
+      "name": "Rashed Kabir",
+      "location": "Dhaka, BD",
+      "text": "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
+      "rating": "11k rating",
+      "ratingScore": "(4.8 Rating)"
+    }
   },
   "footer": {
     "address": "Mars Residence, Dubai United Arab Emirates 337-1500",

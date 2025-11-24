@@ -120,8 +120,27 @@
     "signIn": "Se connecter."
   },
   "testimonials": {
-    "efficient": "Efficace, compétent, et a rendu notre recherche de maison une expérience fluide. Agence hautement recommandée !",
-    "rating": "13k évaluations (4.7 Note)"
+    "testimonial1": {
+      "name": "Jonathan Harry",
+      "location": "Milan, Italie",
+      "text": "Efficace, compétent, et a rendu notre recherche de maison une expérience fluide. Agence hautement recommandée !",
+      "rating": "13k évaluations",
+      "ratingScore": "(4.7 Note)"
+    },
+    "testimonial2": {
+      "name": "Sofia Rena",
+      "location": "New York, USA",
+      "text": "Efficace, compétent, et a rendu notre recherche de maison une expérience fluide. Agence hautement recommandée !",
+      "rating": "10k évaluations",
+      "ratingScore": "(4.5 Note)"
+    },
+    "testimonial3": {
+      "name": "Rashed Kabir",
+      "location": "Dhaka, BD",
+      "text": "Efficace, compétent, et a rendu notre recherche de maison une expérience fluide. Agence hautement recommandée !",
+      "rating": "11k évaluations",
+      "ratingScore": "(4.8 Note)"
+    }
   },
   "footer": {
     "address": "Mars Residence, Dubaï Émirats Arabes Unis 337-1500",

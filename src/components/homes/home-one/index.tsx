@@ -26,7 +26,7 @@ const HomeOne = () => {
       {/* <AgentArea style={false} /> */}
       <BLockFeatureFour />
       <Feedback />
-      <BLockFeatureFive style={false} />
+      {/* <BLockFeatureFive style={false} /> */}
       <FancyBanner style={false} />
       {/* <FancyBannerThree /> */}
       <FooterOne style={false} />

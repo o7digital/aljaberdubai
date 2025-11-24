@@ -1,6 +1,7 @@
 "use client"
 import Image, { StaticImageData } from "next/image"
 import Slider from 'react-slick'
+import { useTranslation } from "@/contexts/TranslationContext"
 
 import rating from "@/assets/images/assets/rating_01.png";
 import feadbackImg_1 from "@/assets/images/media/img_01.jpg";
@@ -10,44 +11,29 @@ import feadbackImg_3 from "@/assets/images/media/img_03.jpg";
 interface DataType {
    id: number;
    img: StaticImageData;
-   title: string;
-   country: string;
-   desc: string;
-   rating_count: number;
-   total_rating: number;
+   testimonialKey: string;
 }
 
 const feedback_data: DataType[] = [
    {
       id: 1,
       img: feadbackImg_1,
-      title: "Jonathan Harry",
-      country: "Milan, Itlay",
-      desc: "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
-      rating_count: 4.7,
-      total_rating: 13,
+      testimonialKey: "testimonials.testimonial1"
    },
    {
       id: 2,
       img: feadbackImg_2,
-      title: "Sofia Rena",
-      country: "New York, USA",
-      desc: "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
-      rating_count: 4.5,
-      total_rating: 10
+      testimonialKey: "testimonials.testimonial2"
    },
    {
       id: 3,
       img: feadbackImg_3,
-      title: "Rashed Kabir",
-      country: "Dhaka, BD",
-      desc: "Efficient, knowledgeable, & made our home search a smooth experience. Highly recommended agency!",
-      rating_count: 4.8,
-      total_rating: 11
+      testimonialKey: "testimonials.testimonial3"
    },
 ]
 
 const Feedback = () => {
+   const { t } = useTranslation();
 
    const settings = {
       dots: true,
@@ -70,15 +56,15 @@ const Feedback = () => {
                         <div className="row align-items-center">
                            <div className="col-md-3">
                               <Image src={item.img} alt="" className="rounded-circle m-auto avatar" />
-                              <h6 className="fs-20 m0 pt-10">{item.title}</h6>
-                              <span className="fs-16">{item.country}</span>
+                              <h6 className="fs-20 m0 pt-10">{t(`${item.testimonialKey}.name`)}</h6>
+                              <span className="fs-16">{t(`${item.testimonialKey}.location`)}</span>
                            </div>
                            <div className="col-md-6">
-                              <blockquote>{item.desc}</blockquote>
+                              <blockquote>{t(`${item.testimonialKey}.text`)}</blockquote>
                            </div>
                            <div className="col-md-3">
                               <Image src={rating} alt="" className="lazy-img m-auto" />
-                              <p className="text-center m0 pt-10"><span className="fw-500 color-dark">{item.total_rating}k rating</span> ({item.rating_count} Rating)</p>
+                              <p className="text-center m0 pt-10"><span className="fw-500 color-dark">{t(`${item.testimonialKey}.rating`)}</span> {t(`${item.testimonialKey}.ratingScore`)}</p>
                            </div>
                         </div>
                      </div>
