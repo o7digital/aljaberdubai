@@ -17,31 +17,33 @@ interface DataType {
 const address_data: DataType[] = [
    {
       id: 1,
-      title: "We’r always happy to help.",
-      address_1: "ask@homy.com"
+      title: "We're always happy to help.",
+      address_1: "info@aljaberdubai.ae"
    },
    {
       id: 2,
       class_name: "skew-line",
       title: "Our hotline number",
-      address_1: "+757 699 4478,",
-      address_2: "+991 377 9731",
+      address_1: "+971 4 123 4567",
+      address_2: "+971 50 123 4567",
    },
    {
       id: 3,
       title: "Live chat",
-      address_1: "www.homylivechat.com"
+      address_1: "www.aljaberdubai.ae"
    },
 ]
 
 const ContactArea = () => {
+   const { t } = useTranslation();
+   
    return (
       <div className="contact-us border-top mt-130 xl-mt-100 pt-80 lg-pt-60">
          <div className="container">
             <div className="row">
                <div className="col-xxl-9 col-xl-8 col-lg-10 m-auto">
                   <div className="title-one text-center wow fadeInUp">
-                     <h3>{t('contact.mainTitle')}</h3>
+                     <h3>Questions? Feel Free to Reach Out Via Message.</h3>
                   </div>
                </div>
             </div>
