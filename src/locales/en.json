@@ -157,5 +157,19 @@
     "helpTitle": "We're always happy to help.",
     "hotlineTitle": "Our hotline number",
     "liveChatTitle": "Live chat"
+  },
+  "aboutUs": {
+    "subtitle": "About us",
+    "mainTitle": "Secure your",
+    "familyWord": "family's",
+    "dreamHome": "Dream home.",
+    "intro": "Aljaber Dubai is your trusted partner in luxury real estate. With over 15 years of experience in Dubai's dynamic property market.",
+    "contactButton": "Contact Us",
+    "yearsExperience": "Years of experience",
+    "propertiesSold": "Properties sold",
+    "whoWeAre": "Who we are?",
+    "whoWeAreText": "Aljaber Dubai is a leading real estate agency specializing in luxury properties across Dubai. Founded with a vision to redefine property excellence, we combine deep market knowledge with personalized service to help clients find their perfect home or investment.",
+    "ourMission": "Our Mission",
+    "ourMissionText": "Our mission is to provide exceptional real estate services that exceed expectations. We are committed to integrity, transparency, and delivering results that create lasting value for our clients in Dubai's prestigious property landscape."
   }
 }
