@@ -6,7 +6,7 @@ import BLockFeatureFive from "@/components/homes/home-one/BLockFeatureFive"
 import Feedback from "@/components/homes/home-five/Feedback"
 import AgentArea from "@/components/homes/home-one/AgentArea"
 import Brand from "./Brand"
-import FooterFour from "@/layouts/footers/FooterFour"
+import FooterOne from "@/layouts/footers/FooterOne"
 import FancyBanner from "@/components/common/FancyBanner"
 
 const AboutUsOne = () => {
@@ -21,7 +21,7 @@ const AboutUsOne = () => {
          <AgentArea style={false} />
          <Brand />
          <FancyBanner style={false} />
-         <FooterFour />
+         <FooterOne style={false} />
       </>
    )
 }
