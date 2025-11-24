@@ -18,16 +18,26 @@ const HeaderOne = ({ style }: any) => {
                <div className="top-header position-relative">
                   <div className="d-flex align-items-center justify-content-between">
                      <div className="logo order-lg-0" style={{ position: "relative", zIndex: 1000 }}>
-                        <Link href="/" className="d-flex align-items-center gap-4 text-decoration-none">
+                        <Link href="/" className="d-flex align-items-center gap-2 gap-lg-4 text-decoration-none">
+                           <Image
+                              src="/logo/logo.png"
+                              alt="ALJABER DUBAI logo"
+                              width={400}
+                              height={100}
+                              style={{ width: "auto", height: "60px" }}
+                              className="d-lg-none"
+                              priority
+                           />
                            <Image
                               src="/logo/logo.png"
                               alt="ALJABER DUBAI logo"
                               width={400}
                               height={100}
                               style={{ width: "auto", height: "100px" }}
+                              className="d-none d-lg-block"
                               priority
                            />
-                           <span className="fw-semibold text-uppercase text-dark">ALJABER DUBAI</span>
+                           <span className="fw-semibold text-uppercase text-dark" style={{ fontSize: "14px" }}>ALJABER<br className="d-lg-none" /> DUBAI</span>
                         </Link>
                      </div>
                      <div className="right-widget ms-auto ms-lg-0 me-3 me-lg-0 order-lg-3">
@@ -47,7 +57,7 @@ const HeaderOne = ({ style }: any) => {
                                  {locale === 'en' ? 'FR' : 'EN'}
                               </button>
                            </li>
-                           <li>
+                           <li className="d-none d-lg-block">
                               <Link href="#" data-bs-toggle="modal" data-bs-target="#loginModal" className="btn-one"><i className="fa-regular fa-lock"></i> <span>{t('nav.login')}</span></Link>
                            </li>
                         </ul>

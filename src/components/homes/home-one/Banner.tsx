@@ -1,5 +1,5 @@
 "use client"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import Slider from "react-slick"
 import DropdownOne from "@/components/search-dropdown/home-dropdown/DropdownOne"
 import { useTranslation } from "@/contexts/TranslationContext"
@@ -7,6 +7,7 @@ import { useTranslation } from "@/contexts/TranslationContext"
 const Banner = () => {
    const sliderRef = useRef<Slider | null>(null)
    const { t } = useTranslation();
+   const [showSearch, setShowSearch] = useState(false);
 
    const settings = {
       dots: false,
@@ -78,7 +79,28 @@ const Banner = () => {
                   }}>{t('banner.title')}</p>
                </div>
             </div>
-            <div className="row">
+            {/* Bouton pour afficher la search bar sur mobile */}
+            <div className="row d-lg-none mb-3">
+               <div className="col-12 text-center">
+                  <button 
+                     onClick={() => setShowSearch(!showSearch)}
+                     className="btn btn-primary"
+                     style={{
+                        backgroundColor: '#ff5722',
+                        border: 'none',
+                        padding: '12px 30px',
+                        borderRadius: '8px',
+                        fontSize: '16px',
+                        fontWeight: '500'
+                     }}
+                  >
+                     {showSearch ? '✕ Fermer la recherche' : '🔍 Rechercher un bien'}
+                  </button>
+               </div>
+            </div>
+            
+            {/* Search bar - visible sur desktop, collapsible sur mobile */}
+            <div className={`row ${showSearch ? 'd-block' : 'd-none d-lg-block'}`}>
                <div className="col-xxl-10 m-auto">
                   <div className="search-wrapper-one layout-one bg position-relative">
                      <div className="bg-wrapper">
