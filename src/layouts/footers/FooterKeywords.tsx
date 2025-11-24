@@ -48,63 +48,59 @@ const englishVisibleKeywords = [
   "Dubai Hills Estate",
 ];
 
-const listStyle: CSSProperties = {
-  listStyle: "none",
-  padding: 0,
-  margin: 0,
-  display: "flex",
-  flexWrap: "wrap",
-  gap: "10px",
-};
-
-const pillStyle: CSSProperties = {
-  display: "inline-flex",
-  padding: "8px 12px",
-  backgroundColor: "#0f172a",
-  color: "#fff",
-  borderRadius: "10px",
-  fontSize: "14px",
-  letterSpacing: "0.01em",
-};
-
-const sectionStyle: CSSProperties = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-  gap: "16px",
-  width: "100%",
-};
-
 const FooterKeywords = () => {
+  const wrapperStyle: CSSProperties = {
+    marginTop: "18px",
+    paddingTop: "14px",
+    borderTop: "1px solid rgba(15, 23, 42, 0.08)",
+  };
+
+  const listStyle: CSSProperties = {
+    listStyle: "none",
+    padding: 0,
+    margin: 0,
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "8px 12px",
+  };
+
+  const itemStyle: CSSProperties = {
+    color: "#374151",
+    fontSize: "13px",
+    letterSpacing: "0.01em",
+    lineHeight: 1.5,
+    fontWeight: 500,
+    backgroundColor: "transparent",
+    padding: "0",
+  };
+
+  const sectionStyle: CSSProperties = {
+    display: "grid",
+    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+    gap: "12px 18px",
+    width: "100%",
+  };
+
   return (
-    <div
-      className="footer-keywords"
-      style={{
-        marginTop: "48px",
-        padding: "28px",
-        borderRadius: "18px",
-        background: "linear-gradient(135deg, #f7f9fc 0%, #eef2f7 100%)",
-        border: "1px solid #d9e2ec",
-        boxShadow: "0 12px 30px rgba(15, 23, 42, 0.08)",
-      }}
-    >
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px", flexWrap: "wrap", gap: "8px" }}>
-        <h4 style={{ margin: 0, fontWeight: 700, letterSpacing: "0.02em", color: "#0f172a" }}>Dubai Real Estate Keywords</h4>
-        <span style={{ fontSize: "14px", color: "#1f2937", opacity: 0.8 }}>Visible & intentional for authority</span>
+    <div className="footer-keywords" style={wrapperStyle}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "10px", flexWrap: "wrap", gap: "6px" }}>
+        <h5 style={{ margin: 0, fontWeight: 600, letterSpacing: "0.01em", color: "#0f172a", fontSize: "15px" }}>Dubai Real Estate Keywords</h5>
+        <span style={{ fontSize: "12px", color: "#6b7280" }}>Discrets mais lisibles (FR / EN)</span>
       </div>
       <div style={sectionStyle}>
         <div>
-          <h5 style={{ margin: "0 0 10px", color: "#0f172a" }}>🇫🇷 Français</h5>
+          <h6 style={{ margin: "0 0 6px", color: "#111827", fontSize: "13px", fontWeight: 600 }}>🇫🇷 Français</h6>
           <ul style={listStyle}>
             {frenchVisibleKeywords.map((keyword) => (
-              <li key={keyword} style={pillStyle}>{keyword}</li>
+              <li key={keyword} style={itemStyle}>{keyword}</li>
             ))}
           </ul>
         </div>
         <div>
-          <h5 style={{ margin: "0 0 10px", color: "#0f172a" }}>🇬🇧 English</h5>
+          <h6 style={{ margin: "0 0 6px", color: "#111827", fontSize: "13px", fontWeight: 600 }}>🇬🇧 English</h6>
           <ul style={listStyle}>
             {englishVisibleKeywords.map((keyword) => (
-              <li key={keyword} style={pillStyle}>{keyword}</li>
+              <li key={keyword} style={itemStyle}>{keyword}</li>
             ))}
           </ul>
         </div>
